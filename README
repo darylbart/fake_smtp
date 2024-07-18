@@ -1,0 +1,16 @@
+## Easy SMTP Development with Docker Compose 
+This repository provides a simple way to run rnwood/smtp4dev (v3) using Docker Compose. SMTP4Dev is a fake SMTP server for development and testing purposes.
+
+#### Environment Variables (Optional):
+This project utilizes environment variables to define port mappings. You can set these variables before running docker-compose up -d.
+
+- WEB_PORT: Port to expose the SMTP4Dev web interface.
+- SMTP_PORT: Port to expose the SMTP service.
+
+#### Usage
+- Web Interface: Access the SMTP4Dev web interface at http://localhost:{WEB_PORT} 
+- This interface allows you to view received emails, manage settings, and more.
+
+Port Mapping:
+- The SMTP service is exposed on host port {SMTP_PORT}, which maps to container port 25 (standard SMTP port). 
+- You can configure your email client to use localhost:{SMTP_PORT} as the SMTP server.
